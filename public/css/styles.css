@@ -123,9 +123,14 @@ hr.light {
     border-color: #fff;
 }
 
+a{
+    color: white;
+}
+
 a:hover,
 a:focus {
     outline: 0;
+    color: white;
 }
 
 b {
@@ -607,4 +612,9 @@ img::-moz-selection {
 /* FOR ANIMATION */
 .isFadeIn, .isFadeInLeft, .isFadeInRight {
     opacity: 0;
+}
+
+.not-active {
+    pointer-events: none;
+    cursor: default;
 }
