@@ -266,7 +266,6 @@ footer p {
     background: none;
     font-size: 24px;
     padding: 32px 24px;
-    min-width: 420px;
 }
 
 #updates input.btn
@@ -569,8 +568,21 @@ img::-moz-selection {
     #home-download-message {
         margin-top: 20px;
     }
+    .image-about, .image-features, .image-home {
+        width: 60%;
+    }
+    .image-home {
+        margin-bottom: 20px;
+    }
 }
-
+@media(min-width: 480px){
+    .image-about, .image-features, .image-home {
+        width: auto;
+    }
+    .image-home {
+        margin-bottom: auto;
+    }
+}
 @media(min-width: 660px){
     .home-download-links > a:last-child > img, .download-links > a:last-child > img {
         margin-top: 0px;
