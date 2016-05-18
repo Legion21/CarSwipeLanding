@@ -278,7 +278,6 @@ footer p {
     background: #127CB6;
     color: white;
     padding: 16px 32px;
-    margin-left: 10px;
 }
 
 #download {
@@ -538,9 +537,7 @@ img::-moz-selection {
     div.navbar-header, .navbar-default {
         min-height: 60px;
     }
-    #updates input.form-control {
-        min-width: 50px;
-    }
+
     .features-list > li {
         margin-top: 20px;
         margin-bottom: 10px;
@@ -559,6 +556,19 @@ img::-moz-selection {
     #home h2 {
         margin-top: 0px;
     }
+
+    .t-r {
+        text-align: center;
+    }
+    .t-l {
+        text-align: center;
+    }
+    #updates input.btn {
+        margin-top: 10px;
+    }
+    #home-download-message {
+        margin-top: 20px;
+    }
 }
 
 @media(min-width: 660px){
@@ -568,9 +578,6 @@ img::-moz-selection {
     }
     #home {
         text-align: left;
-    }
-    #home-download-message {
-        margin-top: 10px;
     }
 }
 
@@ -632,10 +639,6 @@ img::-moz-selection {
         color: #fff;
     }
 
-    #updates input.form-control {
-        min-width: 300px;
-    }
-
     #home-download-message {
         margin-top: 156px;
     }
@@ -649,10 +652,6 @@ img::-moz-selection {
 {
     .feature {
         margin: 20px auto 0;
-    }
-
-    #updates input.form-control {
-        min-width: 420px;
     }
 }
 
@@ -671,5 +670,17 @@ img::-moz-selection {
         margin-top: 48px;
         min-height: 220px;
         margin-bottom: 128px;
+    }
+
+    #updates input.btn {
+        margin-top: 0px;
+    }
+
+    .t-r {
+        text-align: right;
+    }
+
+    .t-l {
+        text-align: left;
     }
 }
