@@ -35,7 +35,7 @@ $(document).ready(function() {
                 (year ? ('<p>Year: ' + year + '</p>') : '') +
                 (price ? ('<p><b>Price: ' + price + ' $</b></p>') : '') +
                 (mileage ? ('<p>Mileage: ' + mileage + ' miles</p>') : '') +
-                (fromCity || fromState ? ('<p><b>Location: ' + (fromCity ? fromCity : '') + (fromState ? (fromCity ? fromCity : ', ') + fromState : '') + '</b></p>') : '') +
+                (fromCity || fromState ? ('<p><b>Location: ' + (fromCity ? fromCity : '') + (fromState ? (fromCity ? ', ' : '') + fromState : '') + '</b></p>') : '') +
                 '<p><a class="btn btn-success" target="_blank" href="carswipe://' + vinNumber + '">Open in CarSwipe</a></p></div>' +
                 '<div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>' +
                 '</div></div></div></div>');
