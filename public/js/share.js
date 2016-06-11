@@ -28,7 +28,7 @@ $(document).ready(function() {
                 '<div class="modal-header">' +
                 '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
                 '<h4 class="modal-title" id="shareDialogTitle">Open in Application</h4></div>' +
-                '<div class="modal-body"><p>Detected vin number (' + vinNumber + ') that can be found in our mobile app</p>' +
+                '<div class="modal-body"><p>Detected vin number (<b>' + vinNumber + '</b>) that can be found in our mobile app</p>' +
                 ((make && model && year && price && mileage && (fromCity || fromState)) ? '<p><b>Detail Information:</b></p>' : '') +
                 (make ? ('<p>Manufacturer: ' + make + '</p>') : '') +
                 (model ? ('<p>Model: ' + model + '</p>') : '') +
