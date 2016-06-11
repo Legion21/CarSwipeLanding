@@ -1,20 +1,20 @@
 /* font-family: "OpenSansRegular"; */
+
 @font-face {
     font-family: "Open Sans";
     src: url("../fonts/OpenSansRegular/OpenSansRegular.eot");
-    src: url("../fonts/OpenSansRegular/OpenSansRegular.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"),
-    url("../fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
+    src: url("../fonts/OpenSansRegular/OpenSansRegular.eot?#iefix")format("embedded-opentype"), url("../fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"), url("../fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
+
+
 /* font-family: "OpenSansLight"; */
+
 @font-face {
     font-family: "Open Sans Light";
     src: url("../fonts/OpenSansLight/OpenSansLight.eot");
-    src: url("../fonts/OpenSansLight/OpenSansLight.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/OpenSansLight/OpenSansLight.woff") format("woff"),
-    url("../fonts/OpenSansLight/OpenSansLight.ttf") format("truetype");
+    src: url("../fonts/OpenSansLight/OpenSansLight.eot?#iefix")format("embedded-opentype"), url("../fonts/OpenSansLight/OpenSansLight.woff") format("woff"), url("../fonts/OpenSansLight/OpenSansLight.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
@@ -22,23 +22,20 @@
 @font-face {
     font-family: "Open Sans Bold";
     src: url("../fonts/OpenSansBold/OpenSansBold.eot");
-    src: url("../fonts/OpenSansBold/OpenSansBold.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/OpenSansBold/OpenSansBold.woff") format("woff"),
-    url("../fonts/OpenSansBold/OpenSansBold.ttf") format("truetype");
+    src: url("../fonts/OpenSansBold/OpenSansBold.eot?#iefix")format("embedded-opentype"), url("../fonts/OpenSansBold/OpenSansBold.woff") format("woff"), url("../fonts/OpenSansBold/OpenSansBold.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
-
 
 @font-face {
     font-family: "Open Sans Semibold";
     src: url("../fonts/OpenSansSemiBold/OpenSansSemiBold.eot");
-    src: url("../fonts/OpenSansSemiBold/OpenSansSemiBold.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/OpenSansSemiBold/OpenSansSemiBold.woff") format("woff"),
-    url("../fonts/OpenSansSemiBold/OpenSansSemiBold.ttf") format("truetype");
+    src: url("../fonts/OpenSansSemiBold/OpenSansSemiBold.eot?#iefix")format("embedded-opentype"), url("../fonts/OpenSansSemiBold/OpenSansSemiBold.woff") format("woff"), url("../fonts/OpenSansSemiBold/OpenSansSemiBold.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
+
+
 /*
 @font-face {
     font-family: "OpenSansItalic";
@@ -123,7 +120,7 @@ hr.light {
     border-color: #fff;
 }
 
-a{
+a {
     color: white;
 }
 
@@ -137,7 +134,12 @@ b {
     font-family: 'Open Sans Bold';
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Open Sans';
 }
 
@@ -227,12 +229,13 @@ footer p {
     margin: 0px;
 }
 
-
 .no-padding {
     padding: 0;
 }
 
+
 /* SECTIONS */
+
 .image-home {
     margin-top: 20px;
 }
@@ -241,7 +244,8 @@ footer p {
     background-color: #F6F7F8;
 }
 
-#mission h2, #about h2 {
+#mission h2,
+#about h2 {
     font-family: "Open Sans Light";
     font-size: 48px;
     color: #127CB6;
@@ -252,7 +256,8 @@ footer p {
     padding-bottom: 0px;
 }
 
-#about, #updates {
+#about,
+#updates {
     background-color: #F1F2F3;
 }
 
@@ -268,8 +273,7 @@ footer p {
     padding: 32px 24px;
 }
 
-#updates input.btn
-{
+#updates input.btn {
     font-family: "Open Sans Bold";
     font-size: 24px;
     text-shadow: none;
@@ -283,10 +287,11 @@ footer p {
     color: white;
     background: #127CB6 url("../images/bkg.png") top center;
     background-size: cover;
-
 }
 
+
 /* FEATURES */
+
 .features-list {
     list-style: none;
     padding-left: 5px;
@@ -304,7 +309,6 @@ footer p {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
-    
     -webkit-transform: scale(1.0);
     -ms-transform: scale(1.0);
     transform: scale(1.0);
@@ -322,7 +326,9 @@ footer p {
     line-height: 1.25;
 }
 
+
 /* ABOUT */
+
 .p20 {
     font-size: 21px;
 }
@@ -332,6 +338,7 @@ ul.about {
     font-family: "Open Sans Light";
     font-size: 21px;
 }
+
 ul.about > li {
     padding-left: 1em;
     text-indent: -1.4em;
@@ -342,30 +349,34 @@ ul.about > li:before {
     color: #127CB6;
 }
 
+
 /* MISSION */
+
 #mission {
     background: #127CB6 url("../images/mission-bkg.png") top center;
     background-size: cover;
     text-align: center;
 }
 
+
 /* DOWNLOAD */
+
 .download-links {
     margin-top: 64px;
     margin-bottom: 32px;
 }
 
+
 /* FOOTER */
-ul.soc-networks
-{
+
+ul.soc-networks {
     display: block;
     list-style: none;
     margin: 70px auto;
     padding: 0px;
 }
 
-.soc-networks > li
-{
+.soc-networks > li {
     display: inline-block;
     filter: invert(0%);
     -webkit-filter: invert(0%);
@@ -378,7 +389,9 @@ ul.soc-networks
     -webkit-filter: invert(100%);
 }
 
+
 /* NAV BAR */
+
 .navbar-default {
     border: none;
     box-shadow: none;
@@ -387,10 +400,12 @@ ul.soc-networks
     font-size: 16px;
 }
 
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
     background: none;
     box-shadow: none;
-    color:white;
+    color: white;
     font-family: "Open Sans Semibold";
     font-size: 16px;
 }
@@ -408,8 +423,9 @@ ul.soc-networks
     margin-top: 12px;
 }
 
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-    background-color: rgba(255,255,255,0.2);
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 ul.nav.navbar-nav.navbar-right {
@@ -426,7 +442,7 @@ header {
 }
 
 footer {
-    background-color:#38393D;
+    background-color: #38393D;
 }
 
 textarea {
@@ -455,7 +471,7 @@ textarea {
     position: relative;
     margin: 0 auto;
     max-width: 650px;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .gallery-box .gallery-box-caption {
@@ -467,7 +483,7 @@ textarea {
     text-align: center;
     color: #fff;
     opacity: 0;
-    background: rgba(44,44,44,.8);
+    background: rgba(44, 44, 44, .8);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -532,8 +548,12 @@ img::-moz-selection {
     background: 0 0;
 }
 
+
 /* FOR ANIMATION */
-.isFadeIn, .isFadeInLeft, .isFadeInRight {
+
+.isFadeIn,
+.isFadeInLeft,
+.isFadeInRight {
     opacity: 0;
 }
 
@@ -542,17 +562,17 @@ img::-moz-selection {
     cursor: default;
 }
 
+
 /* SIZES */
 
 @media(min-width: 320px) {
     .navbar-brand > img {
         height: 32px;
     }
-
-    div.navbar-header, .navbar-default {
+    div.navbar-header,
+    .navbar-default {
         min-height: 60px;
     }
-
     .features-list > li {
         margin-top: 20px;
         margin-bottom: 10px;
@@ -560,18 +580,17 @@ img::-moz-selection {
     .features-list > li:last-child {
         padding-top: 20px;
     }
-    .home-download-links > a:last-child > img, .download-links > a:last-child > img {
+    .home-download-links > a:last-child > img,
+    .download-links > a:last-child > img {
         margin-top: 10px;
         margin-left: 0px;
     }
     #home {
         text-align: center;
     }
-
     #home h2 {
         margin-top: 0px;
     }
-
     .t-r {
         text-align: center;
     }
@@ -584,23 +603,30 @@ img::-moz-selection {
     #home-download-message {
         margin-top: 20px;
     }
-    .image-about, .image-features, .image-home {
+    .image-about,
+    .image-features,
+    .image-home {
         width: 60%;
     }
     .image-home {
         margin-bottom: 20px;
     }
 }
-@media(min-width: 480px){
-    .image-about, .image-features, .image-home {
+
+@media(min-width: 480px) {
+    .image-about,
+    .image-features,
+    .image-home {
         width: auto;
     }
     .image-home {
         margin-bottom: auto;
     }
 }
-@media(min-width: 660px){
-    .home-download-links > a:last-child > img, .download-links > a:last-child > img {
+
+@media(min-width: 660px) {
+    .home-download-links > a:last-child > img,
+    .download-links > a:last-child > img {
         margin-top: 0px;
         margin-left: 10px;
     }
@@ -609,75 +635,61 @@ img::-moz-selection {
     }
 }
 
-@media(min-width:768px)
-{
+@media(min-width:768px) {
     .icon-lg {
         font-size: 80px;
     }
-
     header {
         min-height: 100%;
     }
-
     .navbar-default {
         border-color: transparent;
         background-color: transparent;
         min-height: 80px;
     }
-
     .navbar-header > .navbar-brand {
         color: #fff;
         padding: 19px;
     }
-
     .navbar-default .navbar-header .navbar-brand:hover,
     .navbar-default .navbar-header .navbar-brand:focus {
         color: #fff;
     }
-
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
         color: #fff;
         padding: 20px;
         letter-spacing: 1.1px;
     }
-
     .navbar-default .nav > li>a:hover,
     .navbar-default .nav>li>a:focus:hover {
         color: white;
     }
-
     .navbar-default.affix .navbar-header .navbar-brand {
         color: #fff;
         padding: 20px;
     }
-
     .navbar-default.affix .navbar-header .navbar-brand:hover,
     .navbar-default.affix .navbar-header .navbar-brand:focus {
         color: #fff;
     }
-
     .navbar-default.affix .nav > li>a,
     .navbar-default.affix .nav>li>a:focus {
         color: #fff;
     }
-
     .navbar-default.affix .nav > li>a:hover,
     .navbar-default.affix .nav>li>a:focus:hover {
         color: #fff;
     }
-
     #home-download-message {
         margin-top: 156px;
     }
-
     #home h2 {
         margin-top: 120px;
     }
 }
 
-@media(min-width:992px)
-{
+@media(min-width:992px) {
     .feature {
         margin: 20px auto 0;
     }
@@ -693,27 +705,25 @@ img::-moz-selection {
     .features-list > li:last-child {
         margin-bottom: 10px;
     }
-
     .features-list > li {
         margin-top: 48px;
         min-height: 220px;
         margin-bottom: 128px;
     }
-
     #updates input.btn {
         margin-top: 0px;
     }
-
     .t-r {
         text-align: right;
     }
-
     .t-l {
         text-align: left;
     }
 }
 
+
 /* DIALOG */
+
 .modal-dialog {
     background: white;
     border-radius: 8px;

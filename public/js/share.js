@@ -19,7 +19,7 @@ $(document).ready(function() {
                 '<div class="modal-header">' +
                 '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
                 '<h4 class="modal-title" id="shareDialogTitle">Open in Application</h4></div>' +
-                '<div class="modal-body"><p>Detected vin number (' + vinNumber + ') that can be found in our mobile app</p><p><a href="carswipe://' + vinNumber + '">Open in CarSwipe</a></p></div>' +
+                '<div class="modal-body"><p>Detected vin number (' + vinNumber + ') that can be found in our mobile app</p><p><a class="btn btn-success" target="_blank" href="carswipe://' + vinNumber + '">Open in CarSwipe</a></p></div>' +
                 '<div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>' +
                 '</div></div></div></div>');
 
