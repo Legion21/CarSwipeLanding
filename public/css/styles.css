@@ -712,3 +712,9 @@ img::-moz-selection {
         text-align: left;
     }
 }
+
+/* DIALOG */
+.modal-dialog {
+    background: white;
+    border-radius: 8px;
+}
