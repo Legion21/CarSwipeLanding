@@ -29,13 +29,13 @@ $(document).ready(function() {
                 '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
                 '<h4 class="modal-title" id="shareDialogTitle">Open in Application</h4></div>' +
                 '<div class="modal-body"><p>Detected vin number (' + vinNumber + ') that can be found in our mobile app</p>' +
-                make && model && year && price && mileage && (fromCity || fromState) ? '<p><b>Detail Information:</b></p>' : '' +
-                make ? ('<p>Manufacturer: ' + make + '</p>') : '' +
-                model ? ('<p>Model: ' + model + '</p>') : '' +
-                year ? ('<p>Year: ' + year + '</p>') : '' +
-                price ? ('<p><b>Price: ' + price + ' $</b></p>') : '' +
-                mileage ? ('<p>Mileage: ' + mileage + ' miles</p>') : '' +
-                fromCity || fromState ? ('<p><b>Location: ' + (fromCity ? fromCity : '') + (fromState ? (fromCity ? fromCity : ', ')+fromState : '') + '</b></p>') : '' +
+                (make && model && year && price && mileage && (fromCity || fromState)) ? '<p><b>Detail Information:</b></p>' : '' +
+                (make ? ('<p>Manufacturer: ' + make + '</p>') : '') +
+                (model ? ('<p>Model: ' + model + '</p>') : '') +
+                (year ? ('<p>Year: ' + year + '</p>') : '') +
+                (price ? ('<p><b>Price: ' + price + ' $</b></p>') : '') +
+                (mileage ? ('<p>Mileage: ' + mileage + ' miles</p>') : '') +
+                (fromCity || fromState ? ('<p><b>Location: ' + (fromCity ? fromCity : '') + (fromState ? (fromCity ? fromCity : ', ') + fromState : '') + '</b></p>') : '') +
                 '<p><a class="btn btn-success" target="_blank" href="carswipe://' + vinNumber + '">Open in CarSwipe</a></p></div>' +
                 '<div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>' +
                 '</div></div></div></div>');
