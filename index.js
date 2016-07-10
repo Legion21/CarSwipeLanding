@@ -1,4 +1,5 @@
 var fs = require('fs');
+var os = require("os");
 var http = require('http');
 var https = require('https');
 var express = require('express');
@@ -22,15 +23,30 @@ app.all('/', function(req, res) {
 
 app.all('/vin/:vin', function(req, res) {
     var vin = req.params.vin;
+
     request.post('http://api.carswipeapp.com/api/v1/cars/get_vehicle', function(err, response) {
         if (!err && response.statusCode == 200) {
             if (response.body.car) {
-                res.render('vin', {
-                    title: "CarSwipe",
-                    protocol: req.protocol,
-                    host: req.headers.host,
-                    vehicle: response.body.car
-                })
+                // Проверка первого изображения, и замена в случае отказа
+                var showVinInfo = function() {
+                    res.render('vin', {
+                        title: "CarSwipe",
+                        protocol: req.protocol,
+                        host: req.headers.host,
+                        vehicle: response.body.car
+                    })
+                }
+                if (response.body.car.image_url.length() > 0) {
+                    request.head(response.body.car.image_url[0], function(err1, response1) {
+                        if (err || response.statusCode != 200) {
+                            response.body.car.image_url[0] = "http://" + os.hostname() + "/public/app-logo.png"
+                        }
+                        showVinInfo();
+                    })
+                } else {
+                    response.body.car.image_url.push("http://" + os.hostname() + "/public/app-logo.png")
+                    showVinInfo();
+                }
                 return;
             }
         }
