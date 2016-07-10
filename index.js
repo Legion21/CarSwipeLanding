@@ -48,6 +48,6 @@ app.all('/vin/:vin', function(req, res) {
 
 var server = http.createServer(app);
 
-server.listen(8080, function() {
+server.listen(80, function() {
     console.log('CarSwipe Front-End Application listening on port 80');
 });
