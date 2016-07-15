@@ -743,3 +743,7 @@ img::-moz-selection {
     height: 75px;
     overflow: hidden
 }
+
+.gallery-img > img {
+    vertical-align: middle;
+}
