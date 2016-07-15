@@ -77,7 +77,7 @@
                 <% } %>
         </div>
         <div class="col-lg-8">
-            <h3><%= vehicle.maker_name + ' ' + vehicle.model_name %></h3>
+            <h3><%= vehicle.maker_name + ' ' + vehicle.model_name %><b class="pull-right"><%= vehicle.year %></b></h3>
         </div>
     </div>
 </body>
@@ -89,7 +89,7 @@
 <script type="text/javascript">
     $(".gallery-img").click(function() {
         var img = $(this).find("img")
-        if (img) {            
+        if (img) {
             $(".gallery-preview").attr("src", $(img).attr("src"))
         }
         return false;
