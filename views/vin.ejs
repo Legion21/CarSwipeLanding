@@ -68,6 +68,13 @@
             <div class="row">
                 <img class="img-responsive" src="<%= vehicle.image_url[0] %>">
             </div>
+            <% if(vehicle.image_url.length > 1) { %>
+                <div class="row">
+                    <% for(var i=1;i<vehicle.image_url.length;i++) { %>
+                        <img class="img-responsive" src="<%= vehicle.image_url[i] %>">
+                        <% } %>
+                </div>
+                <% } %>
         </div>
         <div class="col-lg-8">
             <h3><%= vehicle.maker_name + ' ' + vehicle.model_name %></h3>
