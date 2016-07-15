@@ -738,6 +738,7 @@ img::-moz-selection {
 /* GALLERY */
 
 .gallery-img {
+    display: inline-block;
     width: 75px;
     height: 75px;
     overflow: hidden
