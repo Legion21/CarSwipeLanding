@@ -27,9 +27,30 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="<%= protocol %>://<%= host %>/public/favicon/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
     <meta name="description" content="<%= 'Share information on ' + vehicle.maker_name + ' ' + vehicle.model_name + ', vin number '+vehicle.vin_number %>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Card data -->
+    <meta itemprop="name" content="CarSwipe">
+    <meta itemprop="description" content="<%= 'Share information on ' + vehicle.maker_name + ' ' + vehicle.model_name + ', vin number '+vehicle.vin_number %>">
+    <meta itemprop="image" content="<%= vehicle.image_url[0] %>">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:title" content="CarSwipe">
+    <meta name="twitter:card" content="photo">
+    <meta name="twitter:site" content="@alexander_zver" data-dynamic="true">
+    <meta name="twitter:image" content="<%= vehicle.image_url[0] %>">
+    <meta name="twitter:domain" content="carswipe.com">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="CarSwipe">
+    <meta property="og:url" content="<%= protocol %>://<%= host %>/vin/<%= vehicle.vin_number %>">
+    <meta property="og:image:user_generated" content="1">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="<%= 'Share information on ' + vehicle.maker_name + ' ' + vehicle.model_name + ', vin number '+vehicle.vin_number %>">
+    <meta property="og:image" content="<%= vehicle.image_url[0] %>">
+
+    <link rel="image_src" href="<%= vehicle.image_url[0] %>" />
     <!-- Bootstrap -->
     <link rel="stylesheet" href="<%= protocol %>://<%= host %>/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<%= protocol %>://<%= host %>/bootstrap/dist/css/bootstrap-theme.min.css">
@@ -77,7 +98,7 @@
                 <% } %>
         </div>
         <div class="col-lg-8">
-            <h3><%= vehicle.maker_name + ' ' + vehicle.model_name %><b class="pull-right"><%= vehicle.car_year %></b></h3>
+            <h3><%= vehicle.maker_name + ' ' + vehicle.model_name %><span class="pull-right"><%= vehicle.car_year %></span></h3>
         </div>
     </div>
 </body>
