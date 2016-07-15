@@ -23,14 +23,13 @@ app.all('/', function(req, res) {
 
 app.all('/vin/:vin', function(req, res) {
     var vin = req.params.vin;
-
     request.post('http://api.carswipeapp.com/api/v1/cars/get_vehicle', function(err, response) {
         if (!err && response.statusCode == 200) {
             if (response.body.car) {
                 // Проверка первого изображения, и замена в случае отказа
                 var showVinInfo = function() {
                     res.render('vin', {
-                        title: "CarSwipe",
+                        title: "CarSwipe | Vehicle information",
                         protocol: req.protocol,
                         host: req.headers.host,
                         vehicle: response.body.car
@@ -50,16 +49,24 @@ app.all('/vin/:vin', function(req, res) {
                 return;
             }
         }
-        res.render('vin404', {
-            title: "CarSwipe",
+        res.render('p404', {
+            title: "CarSwipe | Vehicle not found",
             protocol: req.protocol,
             host: req.headers.host,
-            description: "Not found vin number",
+            description: "Vehicle not found",
             error: err
         })
     }).json({
         vin: vin
     });
+})
+
+app.all('*', function(req, res) {
+    res.render('p404', {
+        title: "CarSwipe | Page not found",
+        protocol: req.protocol,
+        host: req.headers.host
+    })
 })
 
 var server = http.createServer(app);
