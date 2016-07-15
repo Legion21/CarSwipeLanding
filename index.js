@@ -21,7 +21,25 @@ app.all('/', function(req, res) {
     })
 })
 
-app.all('/vin/:vin', function(req, res) {
+app.all('/info/:vin', InformationByVin)
+
+app.all('*', function(req, res) {
+    res.render('p404', {
+        title: "CarSwipe | Page not found",
+        protocol: req.protocol,
+        host: req.headers.host,
+        description: "Oops, This Page not found!",
+        error: null
+    })
+})
+
+var server = http.createServer(app);
+
+server.listen(80, function() {
+    console.log('CarSwipe Front-End Application listening on port 80');
+});
+
+function InformationByVin(req, res) {
     var vin = req.params.vin;
     request.post('http://api.carswipeapp.com/api/v1/cars/get_vehicle', function(err, response) {
         if (!err && response.statusCode == 200) {
@@ -43,7 +61,7 @@ app.all('/vin/:vin', function(req, res) {
                         showVinInfo();
                     })
                 } else {
-                    response.body.car.image_url = new Array("http://" + os.hostname() + "/public/app-logo.png")                    
+                    response.body.car.image_url = new Array("http://" + os.hostname() + "/public/app-logo.png")
                     showVinInfo();
                 }
                 return;
@@ -59,20 +77,4 @@ app.all('/vin/:vin', function(req, res) {
     }).json({
         vin: vin
     });
-})
-
-app.all('*', function(req, res) {
-    res.render('p404', {
-        title: "CarSwipe | Page not found",
-        protocol: req.protocol,
-        host: req.headers.host,
-        description: "Oops, This Page not found!",
-        error: null
-    })
-})
-
-var server = http.createServer(app);
-
-server.listen(80, function() {
-    console.log('CarSwipe Front-End Application listening on port 80');
-});
+}
