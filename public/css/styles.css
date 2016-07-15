@@ -100,7 +100,7 @@
 
 html,
 body {
-    width: 100%;    
+    width: 100%;
 }
 
 body {
@@ -232,6 +232,9 @@ footer p {
     padding: 0;
 }
 
+.h100 {
+    height: 100%
+}
 
 /* SECTIONS */
 
