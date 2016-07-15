@@ -64,15 +64,20 @@
         </div>
     </nav>
     <div class="container" style="margin-top:100px">
-        <div class="col-lg-4">
+        <div class="col-lg-3">
             <div class="row">
                 <img class="img-responsive" src="<%= vehicle.image_url[0] %>">
             </div>
             <% if(vehicle.image_url.length > 1) { %>
                 <div class="row">
                     <% for(var i=1;i<vehicle.image_url.length;i++) { %>
-                        <img class="img-responsive" src="<%= vehicle.image_url[i] %>" style="width=33%">
-                        <% } %>
+                        <div class="col-lg-1"><img class="img-responsive" src="<%= vehicle.image_url[i] %>"></div>                        
+                        <%
+                            if(i%3 == 1) {
+                                %></div><div class="row"><%
+                            } 
+                        } 
+                        %>
                 </div>
                 <% } %>
         </div>
