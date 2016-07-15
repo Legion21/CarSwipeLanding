@@ -88,7 +88,7 @@
 <script src="<%= protocol %>://<%= host %>/public/js/scripts.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(".gallery-img").click(function() {
-        var img = $(this).children("img")
+        var img = $(this).find("img")
         if (img) {
             $(".gallery-img").attr("src", $(img).attr("src"))
         }
