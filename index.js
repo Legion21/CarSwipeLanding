@@ -35,7 +35,7 @@ app.all('/vin/:vin', function(req, res) {
                         vehicle: response.body.car
                     })
                 }
-                if (response.body.car.image_url.length > 0) {
+                if (response.body.car.image_url && response.body.car.image_url.length > 0) {
                     request.head(response.body.car.image_url[0], function(err1, response1) {
                         if (err || response.statusCode != 200) {
                             response.body.car.image_url[0] = "http://" + os.hostname() + "/public/app-logo.png"
