@@ -43,7 +43,7 @@ app.all('/vin/:vin', function(req, res) {
                         showVinInfo();
                     })
                 } else {
-                    response.body.car.image_url.push("http://" + os.hostname() + "/public/app-logo.png")
+                    response.body.car.image_url = new Array("http://" + os.hostname() + "/public/app-logo.png")                    
                     showVinInfo();
                 }
                 return;
