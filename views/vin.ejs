@@ -69,12 +69,12 @@
                 <img class="img-thumbnail" src="<%= vehicle.image_url[0] %>">
             </div>
             <% if(vehicle.image_url.length > 1) { %>
-                <div class="row">
+                <div class="row" style="margin-top:5px">
                     <% for(var i=0;i<vehicle.image_url.length;i++) { %>
                         <img class="img-thumbnail" src="<%= vehicle.image_url[i] %>" style="width:32%; height: auto">
                         <% if((i-2)%3 == 0) { %>
                 </div>
-                <div class="row">
+                <div class="row" style="margin-top:5px">
                     <%
                             } 
                         } 
