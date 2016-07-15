@@ -66,20 +66,3 @@ $(window).scroll(function() {
         }
     });
 })
-
-//initiate the plugin and pass the id of the div containing gallery images
-$("#zoom").elevateZoom({
-    gallery: 'gallery',
-    cursor: 'pointer',
-    galleryActiveClass: 'active',
-    imageCrossfade: true,    
-});
-
-//pass the images to Fancybox
-$("#zoom").bind("click", function(e) {
-    var ez = $('#zoom').data('elevateZoom');
-    $.fancybox(ez.getGalleryList());
-    return false;
-});
-
-$("#img").elevateZoom();
