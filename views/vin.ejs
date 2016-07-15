@@ -71,7 +71,7 @@
             <% if(vehicle.image_url.length > 1) { %>
                 <div class="row" style="margin-top:5px">
                     <% for(var i=0;i<vehicle.image_url.length;i++) { %>
-                        <div class="gallery-img-crop"><img class="img-responsive gallery-img" src="<%= vehicle.image_url[i] %>" /></div>
+                        <a href="#" class="gallery-img"><img class="img-responsive" src="<%= vehicle.image_url[i] %>" /></a>
                         <% } %>
                 </div>
                 <% } %>
