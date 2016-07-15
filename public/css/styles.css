@@ -233,7 +233,8 @@ footer p {
     padding: 0;
 }
 
-body.p404 {
+body.p404,
+body.vin {
     height: auto
 }
 
