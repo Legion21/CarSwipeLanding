@@ -91,7 +91,8 @@
             </div>
             <% if(vehicle.image_url.length > 1) { %>
                 <div class="row text-center" style="margin-top:5px">
-                    <% for(var i=0;i<vehicle.image_url.length > 3 ? 3 : vehicle.image_url.length; i++) { %>
+                    <% var count = (vehicle.image_url.length >= 3) ? 3 : vehicle.image_url.length 
+                    for(var i=0;i < count; i++) { %>
                         <a href="#" class="gallery-img"><img class="img-responsive" src="<%= vehicle.image_url[i] %>" /></a>
                         <% } %>
                 </div>
