@@ -71,7 +71,7 @@
             <% if(vehicle.image_url.length > 1) { %>
                 <div class="row">
                     <% for(var i=1;i<vehicle.image_url.length;i++) { %>
-                        <div class="col-lg-1" style="height: 48px"><img class="img-responsive" src="<%= vehicle.image_url[i] %>"></div>
+                        <img src="<%= vehicle.image_url[i] %>" style="width:33%; height: auto">
                         <%
                             if(i%3 == 1) {
                                 %>
