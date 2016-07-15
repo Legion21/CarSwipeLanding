@@ -65,7 +65,8 @@ app.all('*', function(req, res) {
     res.render('p404', {
         title: "CarSwipe | Page not found",
         protocol: req.protocol,
-        host: req.headers.host
+        host: req.headers.host,
+        description: "Page not found"
     })
 })
 
