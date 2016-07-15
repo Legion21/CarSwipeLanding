@@ -744,6 +744,11 @@ img::-moz-selection {
     overflow: hidden
 }
 
+.gallery-preview {
+    display: inline-block;
+    overflow: hidden
+}
+
 .gallery-img > img {
     vertical-align: middle;
 }
