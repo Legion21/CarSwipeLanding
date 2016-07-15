@@ -737,7 +737,7 @@ img::-moz-selection {
 
 /* GALLERY */
 
-.gallery-img-crop {
+.gallery-img {
     width: 75px;
     height: 75px;
     overflow: hidden
