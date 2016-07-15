@@ -81,3 +81,5 @@ $("#zoom").bind("click", function(e) {
     $.fancybox(ez.getGalleryList());
     return false;
 });
+
+$("#img").elevateZoom();
