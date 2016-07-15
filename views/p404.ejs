@@ -57,7 +57,7 @@
             <div class="navbar-collapse collapse" id="bs-navbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="<%= protocol %>://<%= host %>">GO TO HOME PAGE</a>
+                        <a class="page-scroll" href="<%= protocol %>://<%= host %>">GO BACK HOME</a>
                     </li>
                 </ul>
             </div>
@@ -69,11 +69,11 @@
             <p align="center">
                 <b><%= description %></b>
             </p>
-                <% if(error) { %>
+            <% if(error) { %>
                 <p align="center"><i><%= error %></i></p>
                 <% } %>
-                    
-            <a class="btn btn-default" href="<%= protocol %>://<%= host %>">GO BACK HOME</a>
+
+            <a align="center" class="btn btn-default" href="<%= protocol %>://<%= host %>">GO BACK HOME</a>
         </div>
     </div>
 </body>
