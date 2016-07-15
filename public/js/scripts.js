@@ -46,6 +46,7 @@ $(document).ready(function() {
         history.replaceState({}, '', window.location.href.slice(0, -1));
     }
 })
+
 $(window).scroll(function() {
     $('section').each(function() {
         var pos = $(this).offset().top;
