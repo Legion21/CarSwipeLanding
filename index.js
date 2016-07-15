@@ -66,7 +66,8 @@ app.all('*', function(req, res) {
         title: "CarSwipe | Page not found",
         protocol: req.protocol,
         host: req.headers.host,
-        description: "Oops, This Page not found!"
+        description: "Oops, This Page not found!",
+        error: null
     })
 })
 
