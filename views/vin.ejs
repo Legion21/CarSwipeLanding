@@ -66,12 +66,12 @@
     <div class="container" style="margin-top:100px">
         <div class="col-lg-4">
             <div class="row">
-                <img class="gallery-preview" src="<%= vehicle.image_url[0] %>" data-zoom-image="<%= vehicle.image_url[0] %>" />
+                <img class="gallery-preview img-responsive" src="<%= vehicle.image_url[0] %>" data-zoom-image="<%= vehicle.image_url[0] %>" />
             </div>
             <% if(vehicle.image_url.length > 1) { %>
                 <div class="row" style="margin-top:5px">
                     <% for(var i=0;i<vehicle.image_url.length;i++) { %>
-                        <div class="gallery-img-crop"><img class="gallery-img" src="<%= vehicle.image_url[i] %>" /></div>
+                        <div class="gallery-img-crop"><img class="img-responsive gallery-img" src="<%= vehicle.image_url[i] %>" /></div>
                         <% } %>
                 </div>
                 <% } %>
