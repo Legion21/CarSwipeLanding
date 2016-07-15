@@ -41,10 +41,9 @@
 })(jQuery);
 
 $(document).ready(function() {
-    var loc = window.location.href,
-        index = loc.indexOf('#');
-    if (index > 0) {
-        window.location = loc.substring(0, index);
+    window.location.replace("#");    
+    if (typeof window.history.replaceState == 'function') {
+    history.replaceState({}, '', window.location.href.slice(0, -1));
     }
 })
 $(window).scroll(function() {
