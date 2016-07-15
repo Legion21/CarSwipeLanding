@@ -41,9 +41,9 @@
 })(jQuery);
 
 $(document).ready(function() {
-    window.location.replace("#");    
+    window.location.replace("#");
     if (typeof window.history.replaceState == 'function') {
-    history.replaceState({}, '', window.location.href.slice(0, -1));
+        history.replaceState({}, '', window.location.href.slice(0, -1));
     }
 })
 $(window).scroll(function() {

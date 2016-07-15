@@ -58,17 +58,20 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a class="page-scroll" href="<%= protocol %>://<%= host %>">GO TO HOME PAGE</a>
-                    </li>                    
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container" style="margin-top:100px">
         <div class="row">
-            <h2 align="center">404</h2>
+            <h1 align="center">404</h1>
             <p align="center">
-                <%= description %>
+                <b><%= description %></b>
             </p>
+            <% if(error) { %>
+                <p align="center"><i><%= error %></i></p>
+                <% } %>
         </div>
     </div>
 </body>
