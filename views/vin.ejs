@@ -90,17 +90,21 @@
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <div class="row text-center">
-                    <img class="gallery-preview img-responsive" src="<%= vehicle.image_url[0] %>" />
-                </div>
-                <% if(vehicle.image_url.length > 1) { %>
-                    <div class="row text-center" style="margin-top:5px">
-                        <% var count = (vehicle.image_url.length >= 3) ? 3 : vehicle.image_url.length 
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row text-center">
+                            <img class="gallery-preview img-responsive" src="<%= vehicle.image_url[0] %>" />
+                        </div>
+                        <% if(vehicle.image_url.length > 1) { %>
+                            <div class="row text-center" style="margin-top:5px">
+                                <% var count = (vehicle.image_url.length >= 3) ? 3 : vehicle.image_url.length 
                         for(var i=0;i < count; i++) { %>
-                            <a href="#" class="gallery-img"><img class="img-responsive" src="<%= vehicle.image_url[i] %>" /></a>
+                                    <a href="#" class="gallery-img"><img class="img-responsive" src="<%= vehicle.image_url[i] %>" /></a>
+                                    <% } %>
+                            </div>
                             <% } %>
                     </div>
-                    <% } %>
+                </div>
             </div>
             <div class="col-lg-8">
                 <div class="row" style="margin-left: 0px">
