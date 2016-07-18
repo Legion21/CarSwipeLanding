@@ -740,7 +740,7 @@ img::-moz-selection {
 .gallery-img {
     display: inline-block;
     width: 75px;
-    height: 75px;
+    height: 50px;
     overflow: hidden
 }
 
