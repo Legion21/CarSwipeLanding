@@ -22,8 +22,7 @@ app.all('/', function(req, res) {
 })
 
 app.all('/investors', function(req, res) {
-    var tempFile = "/public/documents/CarSwipe-Investor-Presentation.pdf";
-    fs.readFile(tempFile, function(err, data) {
+    fs.readFile(express.static(__dirname + "/public/documents/CarSwipe-Investor-Presentation.pdf"), function(err, data) {
         response.contentType("application/pdf");
         response.send(data);
     });
