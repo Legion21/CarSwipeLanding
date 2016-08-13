@@ -21,6 +21,15 @@ app.all('/', function(req, res) {
     })
 })
 
+app.all('/investors', function(req, res) {
+    var stream = fs.readStream('/public/documents');
+    var filename = "CarSwipe-Investor-Presentation.pdf";
+    filename = encodeURIComponent(filename);
+    res.setHeader('Content-disposition', 'inline; filename="' + filename + '"');
+    res.setHeader('Content-type', 'application/pdf');
+    stream.pipe(res);
+})
+
 app.all('/info/:vin', InformationByVin)
 
 app.all('*', function(req, res) {
