@@ -22,11 +22,10 @@ app.all('/', function(req, res) {
 })
 
 app.all('/investors', function(req, res) {
-    var filename = "CarSwipe-Investor-Presentation.pdf";
-    fs.readFile('/public/documents/' + filename, function(err, data) {
-        res.setHeader('Content-disposition', 'inline; filename="' + filename + '"');
-        res.setHeader('Content-type', 'application/pdf');
-        res.send(data);
+    var tempFile = "/public/documents/CarSwipe-Investor-Presentation.pdf";
+    fs.readFile(tempFile, function(err, data) {
+        response.contentType("application/pdf");
+        response.send(data);
     });
 })
 
