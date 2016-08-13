@@ -22,9 +22,22 @@ app.all('/', function(req, res) {
 })
 
 app.all('/investors', function(req, res) {
-    fs.readFile(express.static(__dirname + "/public/documents/CarSwipe-Investor-Presentation.pdf"), function(err, data) {
-        response.contentType("application/pdf");
-        response.send(data);
+    var options = {
+        root: __dirname + '/public/documents/',
+        dotfiles: 'deny',
+        headers: {
+            'x-timestamp': Date.now(),
+            'x-sent': true
+        }
+    };
+    var fileName = "CarSwipe-Investor-Presentation.pdf";
+    res.sendFile(fileName, options, function(err) {
+        if (err) {
+            console.log(err);
+            res.status(err.status).end();
+        } else {
+            console.log('Sent:', fileName);
+        }
     });
 })
 
