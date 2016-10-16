@@ -31,7 +31,8 @@ app.all('/', function(req, res) {
 app.post('/subscribe', function (req, res) {
     if(req.body.email) {
         fs.appendFile(__dirname + '/public/subscribe.list', req.body.email+'\n', function (err) {
-            console.log(err);
+            if(err)
+                console.log(err);
         });
     }
     res.redirect('/');
