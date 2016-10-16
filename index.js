@@ -30,7 +30,7 @@ app.all('/', function(req, res) {
 
 app.post('/subscribe', function (req, res) {
     if(req.body.email) {
-        fs.appendFile('/public/subscribe.list', req.body.email+'\n', function (err) {
+        fs.appendFile(__dirname + '/public/subscribe.list', req.body.email+'\n', function (err) {
             console.log(err);
         });
     }
@@ -98,7 +98,7 @@ function InformationByVin(req, res) {
                         showVinInfo();
                     })
                 } else {
-                    response.body.car.image_url = new Array("http://" + os.hostname() + "/public/app-logo.png")
+                    response.body.car.image_url = new Array("http://" + os.hostname() + "/public/app-logo.png");
                     showVinInfo();
                 }
                 return;
