@@ -4,7 +4,14 @@ var http = require('http');
 var https = require('https');
 var express = require('express');
 var request = require('request');
+var bodyParser = require('body-parser');
+var multer = require('multer');
+// var upload = multer();
+
 var app = new express();
+
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 app.use('/public', express.static(__dirname + '/public'));
 app.use('/bootstrap/dist', express.static(__dirname + '/node_modules/bootstrap/dist'));
@@ -19,7 +26,16 @@ app.all('/', function(req, res) {
         protocol: req.protocol,
         host: req.headers.host
     })
-})
+});
+
+app.post('/subscribe', function (req, res) {
+    if(req.body.email) {
+        fs.appendFile('/public/subscribe.list', req.body.email+'\n', function (err) {
+            console.log(err);
+        });
+    }
+    res.redirect('/');
+});
 
 app.all('/investors', function(req, res) {
     var options = {
@@ -39,9 +55,9 @@ app.all('/investors', function(req, res) {
             console.log('Sent:', fileName);
         }
     });
-})
+});
 
-app.all('/info/:vin', InformationByVin)
+app.all('/info/:vin', InformationByVin);
 
 app.all('*', function(req, res) {
     res.render('p404', {
@@ -51,7 +67,7 @@ app.all('*', function(req, res) {
         description: "Oops, This Page not found!",
         error: null
     })
-})
+});
 
 var server = http.createServer(app);
 
@@ -72,7 +88,8 @@ function InformationByVin(req, res) {
                         host: req.headers.host,
                         vehicle: response.body.car
                     })
-                }
+                };
+
                 if (response.body.car.image_url && response.body.car.image_url.length > 0) {
                     request.head(response.body.car.image_url[0], function(err1, response1) {
                         if (err || response.statusCode != 200) {
