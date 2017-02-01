@@ -38,6 +38,24 @@ app.post('/subscribe', function (req, res) {
     res.redirect('/');
 });
 
+app.all('/sales', function(req, res) {
+    var options = {
+        root: __dirname + '/public/documents/',
+        dotfiles: 'deny',
+        headers: {
+            'x-timestamp': Date.now(),
+            'x-sent': true
+        }
+    };
+    var fileName = "CarSwipe-Overview_v1.25.pdf";
+    res.sendFile(fileName, options, function(err) {
+        if (err) {
+            console.log(err);
+            res.status(err.status).end();
+        }
+    });
+});
+
 app.all('/investors', function(req, res) {
     var options = {
         root: __dirname + '/public/documents/',
@@ -52,8 +70,6 @@ app.all('/investors', function(req, res) {
         if (err) {
             console.log(err);
             res.status(err.status).end();
-        } else {
-            console.log('Sent:', fileName);
         }
     });
 });
