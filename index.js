@@ -47,7 +47,7 @@ app.all('/sales', function(req, res) {
             'x-sent': true
         }
     };
-    var fileName = "CarSwipe-Overview_v1.25.pdf";
+    var fileName = "CarSwipe-Overview_v1.4.pdf";
     res.sendFile(fileName, options, function(err) {
         if (err) {
             console.log(err);
