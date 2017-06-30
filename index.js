@@ -74,6 +74,26 @@ app.all('/investors', function(req, res) {
     });
 });
 
+app.all('/sales', function(req, res) {
+    var options = {
+        root: __dirname + '/public/documents/',
+        dotfiles: 'deny',
+        headers: {
+            'x-timestamp': Date.now(),
+            'x-sent': true
+        }
+    };
+    var fileName = "CarSwipe-Presentation.pdf";
+    res.sendFile(fileName, options, function(err) {
+        if (err) {
+            console.log(err);
+            res.status(err.status).end();
+        } else {
+            console.log('Sent:', fileName);
+        }
+    });
+});
+
 app.all('/info/:vin', InformationByVin);
 
 app.all('*', function(req, res) {
